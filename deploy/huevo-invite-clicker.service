@@ -1,0 +1,19 @@
+[Unit]
+Description=huevo invite-clicker telegram bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# поправь путь под своё расположение репозитория
+WorkingDirectory=/opt/huevo-invite-clicker
+ExecStart=/usr/bin/node src/index.mjs
+Restart=always
+RestartSec=10
+# непривилегированный юзер (создай или поменяй)
+User=clicker
+# на случай ботнет-рейт-лимитов Telegram
+Environment=NODE_OPTIONS=
+
+[Install]
+WantedBy=multi-user.target

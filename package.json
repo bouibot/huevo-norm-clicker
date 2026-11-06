@@ -1,0 +1,17 @@
+{
+  "name": "huevo-invite-clicker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Кликер копилки huevo.su по приглашениям: доступ в бота только по одноразовым кодам от владельца, фарм без комиссии.",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node src/index.mjs"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "dependencies": {
+    "grammy": "^1.35.0"
+  }
+}
